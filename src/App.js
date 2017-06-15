@@ -14,7 +14,7 @@ class App extends Component {
          <div className="App">
 
             <VisibilityTodos />
-            <div style={{flex: '3'}}>
+            <div style={{flex: 5}}>
                <AddTodo />
                <Todos />
             </div>
