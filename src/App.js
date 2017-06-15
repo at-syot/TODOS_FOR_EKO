@@ -7,7 +7,6 @@ import VisibilityTodos from "./containners/VisibilityTodos";
 import AddTodo from "./containners/AddTodo";
 import Todos from "./containners/Todos";
 
-
 class App extends Component {
 
    render() {
