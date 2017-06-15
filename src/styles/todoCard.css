@@ -1,0 +1,39 @@
+.todo-card {
+    width: 80%;
+    height: auto;
+    margin: 0px 10px 0px 10px;
+    box-shadow: lightgray;
+    border: 1px solid gray;
+    border-radius: 3px;
+}
+
+.todo-card .top-containner {
+    background: lightblue;
+    display: flex;
+    flex-direction: row;
+}
+
+.top-containner .title {
+    flex: 3
+}
+
+.top-containner .desc {
+    flex: 1;
+    text-align: right;
+}
+
+.title h4 {
+    /*margin: 10px 0px 0px 10px;*/
+    margin: 10px;
+}
+
+.desc button {
+    height: 100%;
+}
+
+.desc .well {
+    padding: 10px;
+}
+
+
+
