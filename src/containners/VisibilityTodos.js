@@ -1,5 +1,6 @@
 import "react";
 import {connect} from "react-redux";
+import '../styles/visibleFilter.css'
 
 import {ACTIVE, ALL, COMPLETE, setTodoFilter} from "../actions";
 import FilterLink from "../components/FilterLink";
