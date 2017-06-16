@@ -63,11 +63,17 @@ class AddTodo extends Component {
                      return;
                   }
 
-                  onClick(title, desc, isHaveDesc);
+                  onClick(title,
+                      desc,
+                      new Date(),
+                      currentPeriodTime,
+                      isHaveDesc
+                  );
+
                   onTimePeriodClick(MORE_OR_EQUAL5);
 
                   this.todoTitleInput.value = "";
-                  this.todoDescInput.value = ""
+                  this.todoDescInput.value = "";
                }}>
                   <Image src={add}/>
                </a>
