@@ -19,9 +19,11 @@ const allFilters = [
 
 const VisibilityTodos = withRouter(connect(
     (state, { match }) => {
+        const { filter } = match.params
+        const visibleFilter = typeof filter === 'undefined' ? 'all' : match.params.filter
         return {
             filters: allFilters,
-            currentFilter: match.params.filter
+            currentFilter: visibleFilter
         }
     },
     null

@@ -7,8 +7,10 @@ import TodoList from "../components/TodoList";
 
 const Todos = withRouter(connect(
     (state, {match}) => {
+        const { filter } = match.params
+        const visibleFilter = typeof filter === 'undefined' ? 'all' : match.params.filter
         return {
-            todos: getVisibleTodos(state.todos, match.params.filter),
+            todos: getVisibleTodos(state.todos, visibleFilter),
             visibilityFilter: state.todoVisibility
         }
     },
