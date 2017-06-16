@@ -1,27 +1,14 @@
 import React, {Component} from "react";
-
+import {Provider} from "react-redux";
+import store from "./stores";
+import Root from "./components/Root";
 
 import "./styles/App.css";
 
-import VisibilityTodos from "./containners/VisibilityTodos";
-import AddTodo from "./containners/AddTodo";
-import Todos from "./containners/Todos";
-
-class App extends Component {
-
-   render() {
-      return (
-         <div className="App">
-
-            <VisibilityTodos />
-            <div style={{flex: '3'}}>
-               <AddTodo />
-               <Todos />
-            </div>
-
-         </div>
-      );
-   }
-}
+const App = () => (
+    <Provider store={store}>
+        <Root />
+    </Provider>
+)
 
 export default App;

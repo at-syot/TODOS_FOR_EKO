@@ -1,6 +1,6 @@
 .App {
     text-align: left;
-    margin: 5% 30% 0% 30%;
+    margin-top: 5%;
     display: flex;
 }
 
@@ -28,18 +28,3 @@
         transform: rotate(360deg);
     }
 }
-
-/*filter css*/
-.filter {
-    flex: 1;
-    text-align: center;
-}
-
-.filter a {
-    margin: 0 auto;
-    display: block;
-    width: 100px;
-    height: 100px;
-}
-
-/*end filter css*/

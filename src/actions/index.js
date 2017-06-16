@@ -30,12 +30,14 @@ export {
    ACTIVE
 }
 
-export const addTodo = (title, desc = "", isHaveDesc) => ({
+export const addTodo = (title, desc = "", createAt, todoPeriod, isHaveDesc) => ({
    type: ADD_TODO,
    id: v4(),
    title,
    desc,
    isHaveDesc,
+    createAt,
+    todoPeriod,
    completed: false
 });
 
