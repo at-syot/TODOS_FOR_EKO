@@ -1,5 +1,4 @@
-import {ACTIVE, ADD_TODO, ALL, COMPLETE, DELETE_TODO, TOGGLE_TODO} from "../actions";
-import { MORE_OR_EQUAL5, MORE_OR_EQUAL2, LESS_OR_QEUAL1 } from "../actions"
+import {ADD_TODO, DELETE_TODO, LESS_OR_QEUAL1, MORE_OR_EQUAL2, MORE_OR_EQUAL5, TOGGLE_TODO} from "../actions";
 
 export const todos = (state = [], action) => {
    switch (action.type) {
@@ -34,30 +33,32 @@ export const getVisibleTodos = (todos, filter) => {
       case 'active':
          return todos.filter(t => !t.completed);
       case 'complete':
-         return todos.filter(t => t.completed)
+         return todos.filter(t => t.completed);
+      default:
+         return todos;
    }
 };
 
-const urgently = "urgently"
-const medium = "medium"
-const fine = "fine"
+const urgently = "urgently";
+const medium = "medium";
+const fine = "fine";
 
 export const getTodoStatus = (createDate, periodType) => {
-   let createDate_day = createDate.getDate()
-    let compareDate_day = createDate_day
+   let createDate_day = createDate.getDate();
+   let compareDate_day = createDate_day;
    switch (periodType) {
        case MORE_OR_EQUAL5:
-          compareDate_day += 5
+          compareDate_day += 5;
 
            if (createDate_day >= compareDate_day) {
                return fine
            }else if (createDate_day >= 2) {
              return medium
            }
-           return urgently
+          return urgently;
 
        case MORE_OR_EQUAL2:
-          compareDate_day += 2
+          compareDate_day += 2;
 
            if (createDate_day >= compareDate_day) {
                return fine
@@ -67,16 +68,16 @@ export const getTodoStatus = (createDate, periodType) => {
                return urgently
            }
        case LESS_OR_QEUAL1:
-          compareDate_day += 1
+          compareDate_day += 1;
 
            return urgently
 
    }
 
-}
+};
 
-let date = new Date()
-let twomorrow = new Date()
-twomorrow.setDate(date.getDate()+5)
+let date = new Date();
+let twomorrow = new Date();
+twomorrow.setDate(date.getDate() + 5);
 
-console.log(getTodoStatus(twomorrow, MORE_OR_EQUAL5))
+console.log(getTodoStatus(twomorrow, MORE_OR_EQUAL5));
