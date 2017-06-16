@@ -1,12 +1,12 @@
 import React from "react";
-import Link from "./Link";
+import LinkComponent from "./LinkComponent";
 
-const FilterLink = ({filters, ...rest}) => {
+const FilterLinks = ({filters, ...rest}) => {
    return (
       <div className="filter">
          {filters.map(filter => {
             return (
-               <Link
+               <LinkComponent
                   key={filter.role}
                   {...filter}
                   {...rest}
@@ -17,4 +17,4 @@ const FilterLink = ({filters, ...rest}) => {
    )
 };
 
-export default FilterLink
+export default FilterLinks
