@@ -1,15 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import Root from './components/Root'
+import App from './App'
 
 import "./styles/index.css";
 
 ReactDOM.render(
     <Router >
         <div>
-            <Route exact path='/' component={Root}/>
-            <Route path='/:filter' component={Root}/>
+            <Route exact path='/' component={App}/>
+            <Route path='/:filter' component={App}/>
         </div>
     </Router>,
    document.getElementById('root')
